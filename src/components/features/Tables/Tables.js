@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import styles from './Tables.module.scss'; // Zaimportuj plik ze stylami
+import styles from './Tables.module.scss';
 
 const Tables = () => {
   const tables = useSelector(state => state.tables) || [];
@@ -15,7 +15,7 @@ const Tables = () => {
       {tables.map(table => (
         <div key={table.id} className={`mb-4 ${styles.tableTitle}`}>
           <div className={styles.title}>
-            <h2 id={`table-${table.id}`} className="mb-0">Table {table.id}</h2>
+            <h3 id={`table-${table.id}`} className="mb-0">Table {table.id}</h3>
           </div>
           <div className={styles.status}>
             <span>Status: </span>{table.status}

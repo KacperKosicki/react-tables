@@ -8,12 +8,10 @@ export const getTableById = ({ tables }, id) => tables.find((table) => table.id 
 const createActionName = actionName => `app/tables/${actionName}`;
 
 // action names
-
 const UPDATE_TABLES = createActionName('UPDATE_TABLES');
 const EDIT_TABLE = createActionName('EDIT_TABLE');
 
 // action creators
-
 export const updateTables = payload => ({ type: UPDATE_TABLES, payload});
 export const editTable = payload => ({ type: EDIT_TABLE, payload});
 export const fetchTables = () => {
@@ -39,7 +37,6 @@ export const editTableRequest = (tableData) => {
   };
 };
 
-// action creators
 const tablesReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPDATE_TABLES:

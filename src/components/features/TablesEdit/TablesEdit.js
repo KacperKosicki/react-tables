@@ -134,7 +134,7 @@ const TablesEdit = () => {
           <FormLabel className="mb-0 me-4">
             <strong>Bill:</strong>
           </FormLabel>
-          <p className="me-1 mb-0">$</p>
+          <p className="me-1 mb-0">$ </p>
           <FormControl type="text" value={formData.bill} className="w-25 text-center" onChange={handleBillChange} />
         </div>
       )}
